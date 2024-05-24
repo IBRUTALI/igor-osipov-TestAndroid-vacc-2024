@@ -25,7 +25,9 @@ class CoinListAdapter : RecyclerView.Adapter<CoinListAdapter.CoinListViewHolder>
 
     override fun onBindViewHolder(holder: CoinListViewHolder, position: Int) {
         holder.binding.apply {
-            number.text = coins[holder.adapterPosition].rank.toString()
+            "${coins[holder.adapterPosition].rank}.".apply {
+                number.text = this
+            }
             "${coins[holder.adapterPosition].name} (${coins[holder.adapterPosition].symbol})".apply {
                 title.text = this
             }
@@ -35,6 +37,11 @@ class CoinListAdapter : RecyclerView.Adapter<CoinListAdapter.CoinListViewHolder>
             } else {
                 status.text = holder.itemView.context.getString(R.string.inactive)
                 status.setTextColor(holder.itemView.context.getColor(R.color.text_red))
+            }
+        }
+        holder.itemView.setOnClickListener {
+            if (onClickListener != null) {
+                onClickListener?.onCoinClick(holder.adapterPosition, coins[holder.adapterPosition])
             }
         }
     }

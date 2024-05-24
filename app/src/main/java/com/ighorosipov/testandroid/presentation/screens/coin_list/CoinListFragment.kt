@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -49,11 +50,11 @@ class CoinListFragment : Fragment() {
         viewModel.state.observe(viewLifecycleOwner) { state ->
 
             if (state.isLoading) {
-                //Show progress bar
+                //Loading
             }
 
             if (state.error.isNotBlank()) {
-                //Show error message
+                Toast.makeText(requireContext(), state.error, Toast.LENGTH_SHORT).show()
             } else {
                 adapter.setList(state.coins)
             }

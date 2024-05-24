@@ -13,6 +13,7 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import javax.inject.Inject
 
 class CoinDetailViewModel @AssistedInject constructor(
     private val getCoinUseCase: GetCoinUseCase,
@@ -47,7 +48,7 @@ class CoinDetailViewModel @AssistedInject constructor(
     @AssistedFactory
     interface Factory {
 
-        fun create(coinId: String): CoinDetailViewModel
+        fun create(coinId: String?): CoinDetailViewModel
 
     }
 
