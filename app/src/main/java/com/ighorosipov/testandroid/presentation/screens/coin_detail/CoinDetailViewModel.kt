@@ -8,22 +8,23 @@ import androidx.lifecycle.viewModelScope
 import com.ighorosipov.testandroid.domain.use_case.get_coin.GetCoinUseCase
 import com.ighorosipov.testandroid.utills.Constants.PARAM_COIN_ID
 import com.ighorosipov.testandroid.utills.Resource
+import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import javax.inject.Inject
 
-class CoinDetailViewModel @Inject constructor(
+class CoinDetailViewModel @AssistedInject constructor(
     private val getCoinUseCase: GetCoinUseCase,
-    private val savedStateHandle: SavedStateHandle
+    @Assisted private val coinId: String?
 ): ViewModel() {
 
     private val _state = MutableLiveData<CoinDetailState>()
     val state: LiveData<CoinDetailState> = _state
 
     init {
-        savedStateHandle.get<String>(PARAM_COIN_ID)?.let { coinId ->
-            getCoin(coinId)
+        coinId?.let {
+            getCoin(it)
         }
     }
 
@@ -46,7 +47,7 @@ class CoinDetailViewModel @Inject constructor(
     @AssistedFactory
     interface Factory {
 
-        fun create(): CoinDetailViewModel
+        fun create(coinId: String): CoinDetailViewModel
 
     }
 

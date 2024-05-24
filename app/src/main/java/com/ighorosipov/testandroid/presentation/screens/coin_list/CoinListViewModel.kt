@@ -7,11 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.ighorosipov.testandroid.domain.use_case.get_coins.GetCoinsUseCase
 import com.ighorosipov.testandroid.utills.Resource
 import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import javax.inject.Inject
 
-class CoinListViewModel @Inject constructor(
+class CoinListViewModel @AssistedInject constructor(
     private val getCoinsUseCase: GetCoinsUseCase
 ): ViewModel() {
 
