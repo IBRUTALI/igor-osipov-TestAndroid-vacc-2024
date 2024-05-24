@@ -1,4 +1,4 @@
-package com.ighorosipov.testandroid.data.repository
+package com.ighorosipov.testandroid.data.remote
 
 import com.ighorosipov.testandroid.data.remote.dto.CoinDetailDto
 import com.ighorosipov.testandroid.data.remote.dto.CoinDto
