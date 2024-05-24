@@ -7,4 +7,9 @@
     <string name="status">Status</string>
     <string name="active">active</string>
     <string name="inactive">inactive</string>
+    <string name="tags">Tags</string>
+    <string name="description">Description</string>
+    <string name="team_members">Team Members</string>
+    <string name="name">Name</string>
+    <string name="position">Position</string>
 </resources>

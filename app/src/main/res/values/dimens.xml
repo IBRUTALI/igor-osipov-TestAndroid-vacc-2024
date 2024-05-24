@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-    <dimen name="margin_small">2dp</dimen>
-    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small2">6dp</dimen>
+    <dimen name="padding_medium1">16dp</dimen>
+    <dimen name="margin_small1">2dp</dimen>
     <dimen name="margin_small2">4dp</dimen>
+    <dimen name="margin_medium1">8dp</dimen>
+    <dimen name="base_corner_radius">8dp</dimen>
+    <dimen name="padding_small1">4dp</dimen>
 </resources>

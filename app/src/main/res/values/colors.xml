@@ -9,4 +9,6 @@
     <color name="text_green">#2AF22A</color>
     <color name="text_red">#D71818</color>
     <color name="text_dark_grey">#3E3E3E</color>
+    <!-- Element -->
+    <color name="elem_green">#2AF22A</color>
 </resources>

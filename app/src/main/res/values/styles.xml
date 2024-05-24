@@ -7,7 +7,16 @@
         <item name="android:fontFamily">@font/sf_pro_display_medium</item>
     </style>
 
+    <style name="RegularText">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+
     <style name="BaseText.LargeTitle1">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="BaseText.LargeTitle2">
         <item name="android:textSize">20sp</item>
     </style>
 
@@ -16,6 +25,10 @@
     </style>
 
     <style name="BaseText.Title2">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RegularText.Title1">
         <item name="android:textSize">14sp</item>
     </style>
 
